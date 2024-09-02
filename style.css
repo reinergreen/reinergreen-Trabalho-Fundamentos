@@ -1,0 +1,227 @@
+
+:root { /* variaveis */
+    --primary-color: #007BFF;
+    --secondary-color: #FF6347;
+    --dark-color: #343A40;
+    --light-color: #F8F9FA;
+    --white-color: #fff;
+    --nav-height: 70px;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+    
+}
+
+.pag-one {
+   background-color:  #F0F0F0;
+}
+
+.pag-two {
+    background-color: #333333;
+}
+
+.pag-three {
+    background-color: #4A90E2;
+
+}
+
+.pag-four {
+    background-color: #1A1A1A;
+}
+.navbar {
+    background-color: var(--dark-color);
+    height: var(--nav-height);
+    display: flex; /* flexbox para alinhamento */
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+.nav-list {
+    list-style: none;/* Remove o marcador da lista */
+    display: flex;
+    gap: 20px; /* distancia entre itens */
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.2rem;/* Tamanho da fonte dos links */
+    padding: 5px 0;
+    display: inline-block;/* Ajusta o display dos links */
+    transition: color 0.3s ease;/* transição da cor*/
+
+}
+.nav-list a:hover {
+    color: var(--secondary-color); /* Cor do link ao passar o mouse */
+}
+
+.nav-list a::before {
+    content: '';/* Cria um pseudo-elemento */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);/*inicia invisível */
+    transform-origin: bottom right;/* origem da transformação */
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-list a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;/* arredonda as bordas */
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--white-color);
+    font-size: 1.4em;
+    
+}
+
+a {
+    text-decoration: none;
+}    
+
+.num {
+    color: var(--white-color);
+    text-align: center;/* centraliza o texto */
+}
+
+.container {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Sombra ao redor do container */
+    width: 100%;
+    max-width: 500px;/* largura maxima */
+    margin: 2rem auto;/* Margem automatica para centralizar*/
+}
+
+.container ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.container ul li {
+    padding: 10px 0; 
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.123); /* Adiciona uma linha entre os itens */
+}
+
+form {
+    display: flex;
+    flex-direction: column;/* se orienta em coluna */
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+th {
+    text-align: left;
+    padding-bottom: 10px;
+    color: #555;
+}
+
+td {
+    padding-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;/* borda dos campos */
+    box-sizing: border-box;/* Inclui padding e border no cálculo da largura */
+    font-size: 13px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #333;
+    outline: none;/* Remove o contorno */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+textarea {
+    resize: none;/* off redimensionamento */
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;/* muda o cursor ao passar sobre o botão */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.sobre-mim {
+    margin-top: 20px;
+}
+
+section h1 {
+    color: var(--dark-color);
+}
+
+.container.works {
+    display: flex; 
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 50px; 
+}
+
+.container.works a {
+    text-align: center; 
+    color: var(--dark-color)/* cor do texto */
+     
+}
+
+.container.works a:hover {
+    padding: 10px;
+    background-color: #4A90E2;
+    transition: background-color 0.4s ease;
+}
